@@ -1,11 +1,14 @@
-describe("Activity", function () {
+describe("Test_number", function () {
 
 
     beforeEach(function () {
 
     });
 
-    it("should one activity was created on creating", function () {
+    it("judge the number if is four digit", function () {
+        console.log('333',Test.is_test_number())
+// 
+
 
     });
 

@@ -2,17 +2,35 @@
         "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+    <meta charset='utf-8'>
+
     <title>Jasmine Spec Runner</title>
 
     <link rel="shortcut icon" type="image/png" href="lib/jasmine-1.3.0/jasmine_favicon.png">
     <link rel="stylesheet" type="text/css" href="../lib/jasmine-1.3.0/jasmine.css">
     <script type="text/javascript" src="../lib/jasmine-1.3.0/jasmine.js"></script>
     <script type="text/javascript" src="../lib/jasmine-1.3.0/jasmine-html.js"></script>
-    <script type="text/javascript" src="../practice/spec/activity_spec.js"></script>
-
-    <script type="text/javascript" src="src/TestNumber.js"></script>
+    <script type="text/javascript" src="../lib/underscore-min.js"></script>
 
 
+    <!-- include src files here... -->
+    <!--<script type="text/javascript" src="src/ActivityModel.js"></script>-->
+    <!--<script type="text/javascript" src="src/BidModel.js"></script>-->
+    <!--<script type="text/javascript" src="src/SignUpModel.js"></script>-->
+    <!--<script type="text/javascript" src="src/sms.js"></script>-->
+    <!--<script type="text/javascript" src="src/Bidding.js"></script>-->
+    <!-- include fixture files here... -->
+    <script type="text/javascript" src="spec/fixture.js"></script>
+    <!--<script type="text/javascript" src="spec/fixtures.js"></script>-->
+
+    <!-- include spec files here... -->
+    <script type="text/javascript" src="spec/number_spec.js"></script>
+    <!--<script type="text/javascript" src="spec/sign_up_spec.js"></script>-->
+    <script type="text/javascript" src="spec/judge_number_spec.js"></script>
+    <script type="text/javascript" src="src/Number.js"></script>
+    <script type="text/javascript" src="src/JudgeNumber.js"></script>
+    <!--<script type="text/javascript" src="spec/bids_and_bidding_render_spec.js"></script>-->
+    <!--<script type="text/javascript" src="spec/sign_up_render_spec.js"></script>-->
 
     <script type="text/javascript">
         (function () {
@@ -46,24 +64,6 @@
 </head>
 
 <body>
-    <header>
-
-        <input class='input-full'height='30' ng-model='input_name'>
-        <p class='text-center'>'num'</p>
-        <div>
-            {{num}}
-        </div>
-        <button ng-tap='go_sign()'>start</button>
-        <button ng-tap='go_sign()'>end</button>
-
-
-        <script type="text/javascript">
-            var num = Test.is_test_number()
-
-            console.log(num,'rrr')
-
-        </script>
-        </input>
-    </header>
 </body>
 </html>
+

@@ -3,7 +3,6 @@ function Test($scope){
 }
 Test.is_test_number = function(){
     localStorage.removeItem("current_number")
-    console.log('hhh')
     var one = Math.floor(Math.random()*9+1);
     var two = Math.floor(Math.random()*9+0);
     var three = Math.floor(Math.random()*9+0);

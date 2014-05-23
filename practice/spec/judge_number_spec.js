@@ -14,13 +14,6 @@ describe("JudgeNumber", function () {
 
     });
 
-    it("should the number is not a number", function () {
-        var name = 'abcd'
-        var number = JudgeNumber.is_not_number(name)
-
-        expect(number).toEqual(false)
-    });
-
 
 
 });

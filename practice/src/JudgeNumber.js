@@ -11,6 +11,8 @@ JudgeNumber.is_not_number = function(name){
     return isNaN(name) == 0
 }
 JudgeNumber.compare_number_with_input = function(number1,number2){
+    console.log(number1,'1')
+    console.log(number2,'2')
     var the_first = JudgeNumber.get_every_number(number1);
     var the_second = JudgeNumber.get_every_number(number2);
     var x = 0,y = 0;
@@ -25,6 +27,7 @@ JudgeNumber.compare_number_with_input = function(number1,number2){
            }
        }
     }
+    console.log(x+'A'+y+'B','111')
     return x+'A'+y+'B';
 }
 JudgeNumber.get_every_number = function(number){
@@ -36,12 +39,8 @@ JudgeNumber.get_every_number = function(number){
     every_number.push(one,two,three,four)
     return every_number;
 }
-function save_input_number(){
-    var a = my.name.value;
-    console.log(a,'a')
-    localStorage.current_input_name = a;
-    alert(localStorage.current_input_name);
-}
 function print_number(){
-   console.log()
+    var a = my.name.value;
+    var b = JudgeNumber.compare_number_with_input(a,localStorage.current_number)
+    document.getElementById("demo").innerHTML = b
 }

@@ -6,7 +6,6 @@
 
     <title>test</title>
 
-    <script type="text/javascript" src="src/Number.js"></script>
     <script type="text/javascript" src="src/Random.js"></script>
     <script type="text/javascript" src="src/JudgeNumber.js"></script>
 </head>
@@ -15,12 +14,9 @@
 <form name="my">
     <input type="text" name="name" />
     <br/>
-    <input type="button"  value="start" onclick="save_input_number()" />
-    <input type="button"  value="end" onclick="print_number()" />
+    <input type="button"  value="开始" onclick="Random.is_test_number()" />
+    <input type="button"  value="结束" onclick="print_number()" />
 </form>
-<p id="demo" type="hidden"></p>
-<script Language="JavaScript">
-    document.getElementById("demo").innerHTML = localStorage.current_number
- </script>
+<p id="demo"></p>
 </body>
 </html>

@@ -36,3 +36,12 @@ JudgeNumber.get_every_number = function(number){
     every_number.push(one,two,three,four)
     return every_number;
 }
+function save_input_number(){
+    var a = my.name.value;
+    console.log(a,'a')
+    localStorage.current_input_name = a;
+    alert(localStorage.current_input_name);
+}
+function print_number(){
+   console.log()
+}

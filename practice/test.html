@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset='utf-8'>
+
+    <title>test</title>
+
+    <script type="text/javascript" src="src/Number.js"></script>
+    <script type="text/javascript" src="src/Random.js"></script>
+    <script type="text/javascript" src="src/JudgeNumber.js"></script>
+</head>
+
+<body>
+<form name="my">
+    <input type="text" name="name" />
+    <br/>
+    <input type="button"  value="start" onclick="save_input_number()" />
+    <input type="button"  value="end" onclick="print_number()" />
+</form>
+<p id="demo" type="hidden"></p>
+<script Language="JavaScript">
+    document.getElementById("demo").innerHTML = localStorage.current_number
+ </script>
+</body>
+</html>

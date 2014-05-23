@@ -11,6 +11,7 @@ Random.create_number = function(){
     return numbers;
 }
 Random.search_the_number = function(){
+    Random.create_number();
     var numbers = JSON.parse(localStorage.numbers)
     var random_number =  _.filter(numbers,function(number){
         return numbers[0] == number

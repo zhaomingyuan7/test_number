@@ -26,5 +26,7 @@ Random.is_test_number = function(){
         return Random.is_test_number ();
     }
     var number = one*1000+two*100+three*10+four*1;
+    var number = number.toString()
+    localStorage.current_number = number
     return number
 }

@@ -12,27 +12,12 @@
     <script type="text/javascript" src="../lib/jasmine-1.3.0/jasmine-html.js"></script>
     <script type="text/javascript" src="../lib/underscore-min.js"></script>
 
-
-    <!-- include src files here... -->
-    <!--<script type="text/javascript" src="src/ActivityModel.js"></script>-->
-    <!--<script type="text/javascript" src="src/BidModel.js"></script>-->
-    <!--<script type="text/javascript" src="src/SignUpModel.js"></script>-->
-    <!--<script type="text/javascript" src="src/sms.js"></script>-->
-    <!--<script type="text/javascript" src="src/Bidding.js"></script>-->
-    <!-- include fixture files here... -->
-    <script type="text/javascript" src="spec/fixture.js"></script>
-    <!--<script type="text/javascript" src="spec/fixtures.js"></script>-->
-
-    <!-- include spec files here... -->
     <script type="text/javascript" src="spec/compare_spec.js"></script>
     <script type="text/javascript" src="spec/number_spec.js"></script>
     <script type="text/javascript" src="spec/random_spec.js"></script>
     <script type="text/javascript" src="spec/judge_number_spec.js"></script>
-    <script type="text/javascript" src="src/Number.js"></script>
     <script type="text/javascript" src="src/Random.js"></script>
     <script type="text/javascript" src="src/JudgeNumber.js"></script>
-    <!--<script type="text/javascript" src="spec/bids_and_bidding_render_spec.js"></script>-->
-    <!--<script type="text/javascript" src="spec/sign_up_render_spec.js"></script>-->
 
     <script type="text/javascript">
         (function () {
@@ -66,6 +51,14 @@
 </head>
 
 <body>
+<form name="my">
+    <input type="text" name="name" />
+    <br/>
+    <input type="button"  value="开始游戏" onclick="Random.is_test_number(),this.disabled = true" />
+    <input type="button"  value="结束" onclick="print_number(this)" />
+</form>
+<p id="demo"></p>
+<p id="times"></p>
 </body>
 </html>
 

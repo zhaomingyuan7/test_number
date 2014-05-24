@@ -4,7 +4,6 @@ describe("number", function () {
     beforeEach(function () {
     });
     afterEach(function(){
-        localStorage.clear();
     })
 
     it("should the number  is four length ", function () {

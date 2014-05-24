@@ -39,13 +39,7 @@ JudgeNumber.get_every_number = function(number){
     every_number.push(one,two,three,four)
     return every_number;
 }
-if(z >= 6){
-    localStorage.removeItem("current_number")
-    document.getElementById("times").innerHTML = "你已竞猜六次"
-}
-else{
-    var z = 0;
-}
+var z = 0;
 
 function print_number(btn){
     z++;
@@ -55,11 +49,17 @@ function print_number(btn){
         document.getElementById("times").innerHTML = "你已竞猜六次"
     }
     var a = my.name.value;
-    var b = JudgeNumber.compare_number_with_input(a,localStorage.current_number)
+    console.log(Random.is_test_number(),'ddd')
+    var b = JudgeNumber.compare_number_with_input(a,Random.is_test_number())
     document.getElementById("demo").innerHTML = b
     console.log(z,'z')
     localStorage.z = z;
 }
 function btnDisable(btn){
    btn.disabled = true;
+}
+function start_button(){
+    if(z == 6){
+     return true
+    }
 }

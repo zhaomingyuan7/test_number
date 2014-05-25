@@ -39,23 +39,25 @@ var z = 0;
 function print_number(){
     var number = document.getElementById("name").value
     z++;
-    if(z == 6){
-        document.getElementById('end').disabled = true
-        document.getElementById("times").innerHTML = "你已竞猜六次";
-    }
     var b = JudgeNumber.compare_number_with_input(number,localStorage.current_number)
+    if(z == 6 ){
+        document.getElementById('end').disabled = true
+        document.getElementById('name').disabled = true
+        if(b != "4A0B"){
+            document.getElementById("times").innerHTML = "你已竞猜六次";
+        }
+    }
     if(b == "4A0B"){
-        document.getElementById("demo").innerHTML = "成功猜对数字" + b;
+        document.getElementById("demo").innerHTML = "成功猜对数字";
     }
     else{
         document.getElementById("demo").innerHTML = b;
     }
 }
 function start_button(){
-    Random.test_number;
+    Random.is_test_number;
     document.getElementById('end').disabled = false;
     document.getElementById('start').disabled = true;
     document.getElementById('name').disabled = false
-    console.log(localStorage.current_number,'3333333333')
 
 }

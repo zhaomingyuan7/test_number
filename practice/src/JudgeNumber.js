@@ -38,14 +38,19 @@ JudgeNumber.get_every_number = function(number){
 var z = 0;
 function print_number(){
     var number = document.getElementById("name").value
+    var random_number = localStorage.current_number
     z++;
-    var b = JudgeNumber.compare_number_with_input(number,localStorage.current_number)
+    var b = JudgeNumber.compare_number_with_input(number,random_number)
     if(z == 6 ){
+        z = 0;
         document.getElementById('end').disabled = true
         document.getElementById('name').disabled = true
         if(b != "4A0B"){
             document.getElementById("times").innerHTML = "你已竞猜六次";
         }
+    }
+    if(number == ''){
+        document.getElementById("demo").innerHTML = "0A0B";
     }
     if(b == "4A0B"){
         document.getElementById("demo").innerHTML = "成功猜对数字";
@@ -57,7 +62,7 @@ function print_number(){
 function start_button(){
     Random.is_test_number;
     document.getElementById('end').disabled = false;
-    document.getElementById('start').disabled = true;
     document.getElementById('name').disabled = false
-
+    document.getElementById("demo").innerHTML = "";
+    document.getElementById("times").innerHTML = "";
 }

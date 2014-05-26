@@ -41,6 +41,17 @@ describe("compare", function () {
         expect(input_number).toEqual("3A0B");
     });
 
+    it("should be comparing 1234 with 4321 to 0A4B", function () {
+        var input_number = compare_number_with_input(1234,1342)
+
+        expect(input_number).toEqual("1A3B");
+    });
+    it("should be comparing 1234 with 4321 to 0A4B", function () {
+        var input_number = compare_number_with_input(1234,1562)
+
+        expect(input_number).toEqual("1A1B");
+    });
+
 
 
 });

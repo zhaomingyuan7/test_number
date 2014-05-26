@@ -43,17 +43,34 @@ describe("page", function () {
         localStorage.current_number = 1234;
         document.getElementById('end').onclick();
         var remind = document.getElementById("demo").innerHTML;
-        expect(remind).toEqual("成功猜对数字")
+
+        expect(remind).toEqual("成功猜对数字");
     });
 
-    it("should show reminding when second click guess button", function () {
+    it("should show reminding when click guess button three times", function () {
         document.getElementById('name').value = 1234;
-        localStorage.current_number = 1356
-        for(var i=0; i<2; i +=1){
-            document.getElementById('end').onclick();
-        }
+        localStorage.current_number = 1356;
+        document.getElementById('end').onclick();
         var remind = document.getElementById("demo").innerHTML;
-        expect(remind).toEqual("1A1B")
+
+        expect(remind).toEqual("1A1B");
+
+        document.getElementById('end').onclick();
+        var remind = document.getElementById("demo").innerHTML;
+
+        expect(remind).toEqual("1A1B");
+
+        localStorage.current_number = 1430;
+        document.getElementById('end').onclick();
+        var remind = document.getElementById("demo").innerHTML;
+
+        expect(remind).toEqual("2A1B");
+
+        document.getElementById('end').onclick();
+        var remind = document.getElementById("demo").innerHTML;
+
+        expect(remind).toEqual("2A1B");
+
     });
 
     it("should show reminding when fifth click guess button", function () {
@@ -63,6 +80,7 @@ describe("page", function () {
             document.getElementById('end').onclick();
         }
         var remind = document.getElementById("demo").innerHTML;
+
         expect(remind).toEqual("0A3B");
     });
 
@@ -73,6 +91,7 @@ describe("page", function () {
             document.getElementById('end').onclick();
         }
         var remind = document.getElementById("demo").innerHTML;
+
         expect(remind).toEqual("成功猜对数字");
     });
 
@@ -84,6 +103,7 @@ describe("page", function () {
         }
         var remind = document.getElementById("demo").innerHTML;
         var times = document.getElementById("times").innerHTML;
+
         expect(remind).toEqual("2A0B");
         expect(times).toEqual("你已竞猜六次");
     });

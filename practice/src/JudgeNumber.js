@@ -1,15 +1,6 @@
 function JudgeNumber(){
 
 }
-JudgeNumber.create_number = function(){
-    return Random.is_test_number();
-}
-JudgeNumber.is_number = function(){
-    return isNaN(JudgeNumber.create_number()) == 0
-}
-JudgeNumber.is_not_number = function(name){
-    return isNaN(name) == 0
-}
 JudgeNumber.compare_number_with_input = function(number1,number2){
     var the_first = JudgeNumber.get_every_number(number1);
     var the_second = JudgeNumber.get_every_number(number2);
@@ -36,7 +27,7 @@ JudgeNumber.get_every_number = function(number){
     return every_number;
 }
 var z = 0;
-function print_number(){
+function guess_button(){
     var number = document.getElementById("name").value
     var random_number = localStorage.current_number
     z++;
@@ -60,7 +51,7 @@ function print_number(){
     }
 }
 function start_button(){
-    Random.is_test_number;
+    creat_a_number();
     document.getElementById('end').disabled = false;
     document.getElementById('name').disabled = false
     document.getElementById("demo").innerHTML = "";

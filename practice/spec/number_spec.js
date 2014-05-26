@@ -7,6 +7,7 @@ describe("number", function () {
 
     afterEach(function(){
 
+        localStorage.clear();
     })
 
     it("should be four length ", function () {
